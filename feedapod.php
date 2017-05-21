@@ -34,7 +34,8 @@ for ($i=0; $i< $iteration ; $i++){
 					"PostalCode" : "20546" },';
 	$jsonD2Dtext.='"ID": "'.$collection->{'title'}.'",';
 	$jsonD2Dtext.='"Title": "'.$collection->{'title'}.'",';
-	$jsonD2Dtext.='"Description": "'.$collection->{'explanation'}.'",';
+	$desc = str_replace('"','',$collection->{'explanation'});
+	$jsonD2Dtext .= '"Description": "' . $desc. '",';
 	$jsonD2Dtext.='"Credit": "NASA",';
 	$jsonD2Dtext.='"PublicationDate": "'.$datestr.'",';
 	$jsonD2Dtext.='"Assets": [{';
